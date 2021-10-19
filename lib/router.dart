@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:providerstudy/views/home.dart';
 import 'package:providerstudy/views/login.dart';
 
-import 'RoutePaths.dart';
+import 'route_paths.dart';
 
-class Router {
+class ARouter {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case RoutePaths.LOGIN:
