@@ -3,17 +3,17 @@ import 'package:provider/provider.dart';
 import 'package:providerstudy/viewmodels/base_model.dart';
 
 class BaseView<T extends BaseModel> extends StatefulWidget {
-  final Widget Function(BuildContext context, T model, Widget child) builder;
+  final Widget Function(BuildContext context, T model, Widget? child) builder;
 
   final T model;
-  final Widget child;
+  final Widget? child;
   final Function(T) onModelReady;
 
   BaseView(
       {Key? key,
       required this.model,
       required this.builder,
-      required this.child,
+      this.child,
       required this.onModelReady})
       : super(key: key);
 

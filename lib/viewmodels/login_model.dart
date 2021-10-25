@@ -23,8 +23,9 @@ class LoginViewModel extends BaseModel {
     if(_timer == null) {
       _timer = Timer.periodic(Duration(seconds: 1), (timer) {
         _countdownTime--;
+        notifyListeners();
         if(_countdownTime == 0) {
-
+           cancelTimer();
         }
       });
     }
@@ -43,10 +44,6 @@ class LoginViewModel extends BaseModel {
     super.dispose();
   }
 
-  int get countdownTime => _countdownTime;
-  set countdownTime(int value) {
-    _countdownTime = value;
-    notifyListeners();
-  }
+  int get getCountdownTime => _countdownTime;
 
 }

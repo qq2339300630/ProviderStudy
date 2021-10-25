@@ -8,7 +8,7 @@ class BaseModel extends ChangeNotifier {
   Api api;
   bool disposed = false;
 
-  BaseModel({required Api api}):api = api
+  BaseModel({required Api api}):api = api;
 
   ViewState _state = ViewState.Idle;
 
